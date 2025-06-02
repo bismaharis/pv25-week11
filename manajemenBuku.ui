@@ -37,7 +37,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Lalu Bisma Kurniawan Haris | F1D022055 </string>
+     <string>Lalu Bisma Kurniawan Haris | F1D022055</string>
     </property>
    </widget>
    <widget class="QTabWidget" name="tabWidget">
@@ -56,87 +56,83 @@
      <attribute name="title">
       <string>Tab 1</string>
      </attribute>
-     <widget class="QLabel" name="label_3">
+     <widget class="QScrollArea" name="scrollArea">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>20</y>
-        <width>81</width>
-        <height>21</height>
+        <width>481</width>
+        <height>130</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Judul</string>
+      <property name="widgetResizable">
+       <bool>true</bool>
       </property>
-     </widget>
-     <widget class="QLabel" name="label_4">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>60</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Pengarang</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_5">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>100</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Tahun</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="inputJudul">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>20</y>
-        <width>331</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="inputPengarang">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>60</y>
-        <width>391</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="inputTahun">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>100</y>
-        <width>391</width>
-        <height>20</height>
-       </rect>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnSimpan">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>130</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Simpan</string>
-      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Judul</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <layout class="QHBoxLayout" name="judulLayout">
+          <item>
+           <widget class="QLineEdit" name="inputJudul">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>8</horstretch> <!-- 80% of the width -->
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnPasteClipboard">
+            <property name="text">
+             <string>paste</string>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>2</horstretch> <!-- 20% of the width -->
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Pengarang</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="inputPengarang"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>Tahun</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="inputTahun"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QPushButton" name="btnSimpan">
+          <property name="text">
+           <string>Simpan</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
      <widget class="QTableWidget" name="tableWidget">
       <property name="geometry">
@@ -159,19 +155,6 @@
       </property>
       <property name="text">
        <string>Hapus Data</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnPasteClipboard">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>20</y>
-        <width>61</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>paste</string>
       </property>
      </widget>
     </widget>
