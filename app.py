@@ -14,6 +14,7 @@ class MainApp(QMainWindow):
         super().__init__()
         uic.loadUi("manajemenBuku.ui", self)
         self.setWindowTitle("Manajemen Buku")
+        self.statusbar.showMessage("Lalu Bisma Kurniawan Haris | F1D022055")
 
         self.labelJudul.setFont(QFont("Arial", 16, QFont.Bold))
         self.labelJudul.setStyleSheet("color: #091F51;")
@@ -46,6 +47,8 @@ class MainApp(QMainWindow):
         self.lineCari.setStyleSheet("QLineEdit { color: #555555; } QLineEdit:focus { color: black; }")
         self.addDockWidget(Qt.TopDockWidgetArea, self.dockSearch)
         self.lineCari.textChanged.connect(self.cariData)
+        self.tableWidget.setHorizontalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        self.tableWidget.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
 
         self.initDB()
         self.loadData()
